@@ -1,22 +1,17 @@
-
-import './App.css';
+import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
-import Details from "./components/Details.jsx"
+import Details from "./components/Details.jsx";
+import Home from "./components/Home.jsx";
 
-function App() {
+const App = () => {
   return (
-    <div className='App'>
-
-      <Link to={"/details"} className='link'>
-       Details
-      </Link> 
-          
+    <div className="App">
       <Routes>
-        <Route path='/details' element={<Details/>}/>  
+        <Route path="/" element={<Home />} />
+        <Route path="/details" element={<Details />} />
       </Routes>
-
     </div>
   );
-}
+};
 
 export default App;

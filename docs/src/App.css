@@ -42,12 +42,3 @@
     transform: rotate(360deg);
   }
 }
-
-.link {
-  color:purple;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 2rem;
-  font-family: "salsa", cursive;
-  
-}

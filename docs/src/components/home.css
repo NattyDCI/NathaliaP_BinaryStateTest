@@ -1,0 +1,15 @@
+.link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: "salsa", cursive;
+}
+
+.container {
+  background-color: rgb(146, 145, 145);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
