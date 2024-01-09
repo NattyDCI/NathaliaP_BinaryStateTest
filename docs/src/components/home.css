@@ -1,9 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
 .link {
   color: white;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.5rem;
-  font-family: "salsa", cursive;
+  font-weight: medium;
+  font-size: 1.2rem;
 }
 
 
@@ -17,20 +19,51 @@
 
 @keyframes shake {
   10% {
-    rotate: 12deg;
+    rotate: 8deg;
   }
   30% {
-    rotate: -20deg;
+    rotate: -12deg;
   }
   50% {
-    rotate: 17deg;
+    rotate: 12deg;
   }
-}
-
-.buttonBox:hover {
-  animation: shake 500ms ease-out;
 }
 
 .introText {
+  font-family: 'PT Mono', monospace;
+  animation: shake 1.5s ease-out 1s;
+  transition-duration: 1s;
+}
+
+
+.button {
+  margin-left: 10px;
   display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 150px;
+  padding:0rem;
+  background-color:blueviolet;
+  border-radius: 1rem;
+  filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.5))
+}
+
+.button:hover {
+  scale:0.9;
+  filter: drop-shadow(0 0.2rem 0.13rem rgba(0, 0, 0, 0.3));  
+  cursor: pointer;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.buttonText {
+  font-family: 'PT Mono', monospace;
+  margin-right: 0.6rem;
 }

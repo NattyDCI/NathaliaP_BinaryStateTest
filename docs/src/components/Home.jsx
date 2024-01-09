@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { ArrowIcon } from "../assets"
 import { easeOut, motion as m } from "framer-motion";
 
 import "./home.css";
@@ -41,16 +42,15 @@ const Home = () => {
       className="container"
     >
 
-      <div className="introText">
-        <p>HELLO there! want to know something about me? </p>
-        <div  style={{lineHeight:"50px", marginLeft:"0.5rem"}} className="buttonBox">
-          <Link  
-          className="link" to={`./details`}>
-           DETAILS 
+      <div className="box">
+        <p className="introText">HELLO there! want to know something about me? </p>
+        <div className="button">
+          <Link className="link" to={`./details`}>
+             <p className="buttonText">Details</p>
           </Link>
-        </div>  
+          <ArrowIcon/>
+        </div>
         
-       
       </div>
       
     
