@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
 .details {
-  background-color: linear-gradient(180deg, #0c0c1d, #111132) !important;
+  background-color: linear-gradient(180deg, #0c0c1d, #111132);
   height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
@@ -7,6 +9,8 @@
   align-items: center;
   text-align: center;
   position: absolute;
+  z-index: 2;
+
 }
 
 span:after {
@@ -33,6 +37,7 @@ span:after {
   gap: 2rem;
   margin-inline: 3rem;
   margin-top: 4rem;
+  font-family: 'PT Mono', monospace;
 }
 
 img {
@@ -51,7 +56,7 @@ img {
   margin-top: 2rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .columns {
     flex-direction: row;
   }

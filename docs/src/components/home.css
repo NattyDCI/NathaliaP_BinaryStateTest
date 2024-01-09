@@ -6,10 +6,31 @@
   font-family: "salsa", cursive;
 }
 
+
 .container {
   background-color: rgb(146, 145, 145);
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@keyframes shake {
+  10% {
+    rotate: 12deg;
+  }
+  30% {
+    rotate: -20deg;
+  }
+  50% {
+    rotate: 17deg;
+  }
+}
+
+.buttonBox:hover {
+  animation: shake 500ms ease-out;
+}
+
+.introText {
+  display: flex;
 }

@@ -18,9 +18,10 @@ const textVariants = {
   },
 };
 
+
 const imgVariants = {
   initial: {
-    x: -900,
+    x: 900,
   },
   animate: {
     x: 0,
@@ -30,9 +31,23 @@ const imgVariants = {
 
 const Details = () => {
   return (
-    <div className="details">
+    <m.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="details">
       <div className="columns">
+        <div style={{ marginInline: "auto" }}>
+          <m.img
+            animate={{ x: 0 }}
+            initial={{ x: 50 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            src={Illustration_bewerbung}
+            alt="bewerbung photo of me"
+          />
+        </div>
         <div style={{ width: "50%" }}>
+          
           <m.h2
             animate={{ y: 0 }}
             initial={{ y: -30 }}
@@ -54,39 +69,40 @@ const Details = () => {
               {parragraf.para}
             </m.p>
           ))}
-          {logos.map((icon, i) => (
-            <m.img
-              variants={imgVariants}
-              initial="initial"
-              animate="animate"
-              transition={{
-                duration: 3,
-                delay: 1.5,
-                type: "spring",
-                bounce: 0.4,
-              }}
-              src={icon.logo}
-              alt={icon.name}
-              key={i}
-              width="40px"
-              height="40px"
-            />
-          ))}
+          <div style={{display: "flex", flexDirection:"column"}}>
+            <div>
+              {logos.map((icon, i) => (
+                <m.img
+                  variants={imgVariants}
+                  initial="initial"
+                  animate="animate"
+                  transition={{
+                  duration: 3,
+                  delay: 1.5,
+                  type: "spring",
+                  bounce: 0.4,
+                    }}
+                  src={icon.logo}
+                  alt={icon.name}
+                  key={i}
+                  width="40px"
+                  height="40px"
+                />
+              ))}
+            </div>
+            
+            <NavLink className="navlink" to={`/`}>
+            Go back
+            </NavLink> 
+            
+          </div>
+          
+          
         </div>
-        <div style={{ marginInline: "auto" }}>
-          <m.img
-            animate={{ x: 0 }}
-            initial={{ x: 50 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            src={Illustration_bewerbung}
-            alt="bewerbung photo of me"
-          />
-        </div>
+        
       </div>
-      <NavLink className="navlink" to={`/`}>
-        Go back
-      </NavLink>
-    </div>
+      
+    </m.div>
   );
 };
 
